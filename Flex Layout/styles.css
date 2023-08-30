@@ -1,0 +1,27 @@
+body {
+    background-color: #443c35cc;
+    
+}
+.container {
+    display: flex;
+    border: 8px solid black;
+    height: 600px;
+    width: 700px;
+    justify-content: space-around;
+}
+.item {
+    border: 3px solid black;
+    width: 250px;
+    text-align: center;
+    background-color: #9485e275;
+}
+.item-1 {
+    height: 100px;
+    border-style:groove;
+}
+.item-2 {
+    height: 200px;
+}
+.item-3 {
+    height: 300px;
+}
