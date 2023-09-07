@@ -1,0 +1,12 @@
+{
+  "name": "first-navigatable-website",
+  "version": "1.0.0",
+  "description": "**This was my attempt at creating a navigatable website that is hosted by a third party**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
