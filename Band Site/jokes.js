@@ -4,7 +4,7 @@ if (document.readyState == 'loading') {
     ready()
 }
 
-const ready = ()  =>  {
+function ready() {
     var removeCartItemButtons = document.getElementsByClassName('btn-danger')
     for (var i = 0; i < removeCartItemButtons.length; i++) {
         var button = removeCartItemButtons[i];
@@ -68,10 +68,11 @@ const addItemToCart = (title, price, imageSrc) => {
             <button type="button" class="btn btn-danger ">REMOVE</button>
         </div>
         `
-        cartRow.innerHTML = cartRowContents
+    cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removedCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+    updateCartTotal()
 }
 
 const removedCartItem = event => {
@@ -80,7 +81,7 @@ const removedCartItem = event => {
     updateCartTotal();
 }
 
-const quantityChanged =event => {
+const quantityChanged = event => {
     var input = event.target
     if (isNaN(input.value) || input.value <=0 ) {
         input.value = 1;
