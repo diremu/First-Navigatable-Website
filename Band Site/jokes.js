@@ -65,7 +65,7 @@ function addItemToCart(title, price, imageSrc) {
         </div>
         <span class="cart-price cart-column">${price}</span>
         <div class="cart-quantity cart-column">
-            <input type="number" value="2" class="cart-quantity-input">
+            <input type="number" value="1" class="cart-quantity-input">
             <button type="button" class="btn btn-danger ">REMOVE</button>
         </div>
         `
@@ -88,8 +88,9 @@ function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')
     var total = 0 
-    for (let cartRow in cartRows) {
-        var priceElement =cartRow.getElementsByClassName('cart-price')[0]
+    for (var i=0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
         var price = parseFloat(priceElement.innerText.replace('$',''))
         var quantity = quantityElement.value
